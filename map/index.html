@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="http://calvinmetcalf.github.io/leaflet-ajax/dist/leaflet.ajax.min.js"></script> <!-- ./leaflet.ajax.min.js -->
+    <script src="http://calvinmetcalf.github.io/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
     
 </head>
 <body>
@@ -51,8 +51,8 @@
     Esri_NatGeoWorldMap.addTo(map)
     
     // add GeoJSON of points
-    //var pts = new L.GeoJSON.AJAX('./pts_pinulong.geojson'); 
-    //pts.addTo(map)
+    var pts = new L.GeoJSON.AJAX('./pts_pinulong.geojson'); 
+    pts.addTo(map)
 
     // add GeoJSON of points
     var ply = new L.GeoJSON.AJAX('./ply_pinulong.geojson'); 
