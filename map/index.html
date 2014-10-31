@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="http://calvinmetcalf.github.io/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
-    
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/leaflet.awesome-markers.css">
+<script src="../javascripts/leaflet.awesome-markers.js"></script>
+
 </head>
 <body>
-     
-      
+
+
 
     <title>Bbest.github.io</title>
   </head>
@@ -35,32 +39,55 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-      
-      
+
+
   <div id="map" style="width: 600px; height: 400px"></div>
   <script>
 
     // add map
 		var map = L.map('map').setView([38, -115], 7);
-    
+
     // add basemap layer
     var Esri_NatGeoWorldMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 16
 });
     Esri_NatGeoWorldMap.addTo(map)
-    
+
     // add GeoJSON of points
-    var pts = new L.GeoJSON.AJAX('./pts_pinulong.geojson'); 
+    var pts = new L.GeoJSON.AJAX('./pts_pinulong.geojson');
     pts.addTo(map)
 
     // add GeoJSON of points
-    var ply = new L.GeoJSON.AJAX('./ply_pinulong.geojson'); 
+    var ply = new L.GeoJSON.AJAX('./ply_pinulong.geojson');
     ply.addTo(map)
+
+
+    // Creates a red marker with the coffee icon
+  var redMarker = L.AwesomeMarkers.icon({
+    icon: 'tree',
+    markerColor: 'brown'
+  });
+  L.marker([38, -115], {icon: redMarker}).addTo(map);
+
+//   var geojsonMarkerOptions = {
+//     radius: 8,
+//     fillColor: "#ff7800",
+//     color: "#000",
+//     weight: 1,
+//     opacity: 1,
+//     fillOpacity: 0.8
+// };
+//
+// L.geoJson(someGeojsonFeature, {
+//     pointToLayer: function (feature, latlng) {
+//         return L.circleMarker(latlng, geojsonMarkerOptions);
+//     }
+// }).addTo(map);
 
 	</script>
 
- 
+
       </section>
     </div>
 
@@ -71,7 +98,7 @@
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
