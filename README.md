@@ -1,2 +1,5 @@
-bbest.github.io
-===============
+bbest.github.com
+================
+# Jekyll-Bootstrap
+
+personal site
