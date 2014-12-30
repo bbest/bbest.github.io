@@ -1,5 +1,2 @@
-bbest.github.com
+bbest.github.io
 ================
-# Jekyll-Bootstrap
-
-personal site
