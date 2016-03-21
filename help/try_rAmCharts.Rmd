@@ -61,16 +61,27 @@ help(package='rAmCharts')
 
 ```{r}
 library(leaflet)
+library(readr)
 
-data(quakes)
+# load data
+data(quakes) # View(quakes)
+quakes = quakes %>%
+  mutate(row_num = row_number()) %>%
+  select(row_num, everything())
 
-# Show first 20 rows from the `quakes` dataset
+# make data available
+dir.create('data', showWarnings=F)
+write_csv(quakes, 'data/quakes.csv')
+
+# show `quakes` dataset, as clusters, with popup linking to row of data
 leaflet(data = quakes) %>%
   addProviderTiles("Stamen.TonerLite") %>% 
   addMarkers(
+    ~long, ~lat, popup = ~as.character(sprintf(
+      'row_num: <a href=https://github.com/bbest/bbest.github.io/blob/master/data/quakes.csv#L%d>%s</a><br>
+      mag: <strong>%s</strong><br>
+      depth: <strong>%s</strong><br>', row_num+1, row_num, mag, depth)),
     clusterOptions = markerClusterOptions())
-  #addTiles() %>%
-  #addMarkers(~long, ~lat, popup = ~as.character(mag))
 ```
 
 * [Leaflet for R - Markers](http://rstudio.github.io/leaflet/markers.html)
