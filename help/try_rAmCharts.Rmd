@@ -2,7 +2,11 @@
 title: "try_rAmCharts"
 author: "Ben Best"
 date: "March 21, 2016"
-output: html_document
+output:
+  html_document:
+    css: try_rAmCharts.css
+  ioslides_presentation:
+    incremental: true
 ---
 
 ## Introduction
@@ -14,7 +18,7 @@ Let's try [**rAmCharts**](https://github.com/DataKnowledge/rAmCharts), an [_html
 
 ## Methods and Results
 
-```{r,warning=T}
+```{r,warning=F, echo=F}
 # load libaries
 suppressPackageStartupMessages({
   library(pipeR)     # install.packages("pipeR")
@@ -40,3 +44,36 @@ result = file.copy(
 ## Conclusion
 
 Whoah! This `AmCharts` JavaScript library is pretty cool, and easy to load data with `rAmCharts`.
+
+## Discussion
+
+- [adding CSS to rmarkdown html_document](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
+- [wk06_widgets](http://ucsb-bren.github.io/env-info/wk06_widgets.html#htmlwidgets)
+- [Week 8: Interactive Applications - Shiny | ucsb-bren/env-info](http://ucsb-bren.github.io/env-info/wk08_shiny/)
+
+```{r}
+help(package='rAmCharts')
+```
+
+### Leaflet 
+
+[leaflet](http://rstudio.github.io/leaflet/) map
+
+```{r}
+library(leaflet)
+
+data(quakes)
+
+# Show first 20 rows from the `quakes` dataset
+leaflet(data = quakes) %>%
+  addProviderTiles("Stamen.TonerLite") %>% 
+  addMarkers(
+    clusterOptions = markerClusterOptions())
+  #addTiles() %>%
+  #addMarkers(~long, ~lat, popup = ~as.character(mag))
+```
+
+* [Leaflet for R - Markers](http://rstudio.github.io/leaflet/markers.html)
+* [Databases with `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
+
+PS You can see all the code to generate this at <https://github.com/bbest/bbest.github.io/blob/master/help/try_rAmCharts.Rmd>
