@@ -55,7 +55,7 @@ library(dygraphs)
 # get
 lungDeaths <- cbind(mdeaths, fdeaths)
 
-# create time-series chart
+# create zoomable time-series plot
 dygraph(lungDeaths) %>% 
   dyRangeSelector()
 ```
