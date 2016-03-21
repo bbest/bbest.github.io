@@ -1,0 +1,31 @@
+---
+title: "try_rAmCharts"
+author: "Ben Best"
+date: "March 21, 2016"
+output: html_document
+---
+
+## Introduction
+
+Let's try <https://github.com/DataKnowledge/rAmCharts>, an [htmlwidget](http://www.htmlwidgets.org/) for [amCharts](https://www.amcharts.com/).
+
+## Methods and Results
+
+```{r,warning=FALSE}
+# load libaries
+suppressPackageStartupMessages({
+  library(pipeR)     # install.packages("pipeR")
+  library(rAmCharts) # install.packages("rAmCharts")
+})
+
+# load data
+data(iris)
+
+# generate interactive histogram
+amHist(iris$Sepal.Length, freq = FALSE, breaks = 30, col = "gray",
+       path = "http://www.amcharts.com/lib/3")
+```
+
+## Conclusion
+
+Whoah! This `AmCharts` JavaScript library is pretty cool, and easy to load data with `rAmCharts`.
