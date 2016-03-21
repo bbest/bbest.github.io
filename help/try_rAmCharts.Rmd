@@ -7,11 +7,14 @@ output: html_document
 
 ## Introduction
 
-Let's try [rAmCharts](https://github.com/DataKnowledge/rAmCharts), an [htmlwidget](http://www.htmlwidgets.org/) for [amCharts](https://www.amcharts.com/).
+Let's try [**rAmCharts**](https://github.com/DataKnowledge/rAmCharts), an [_htmlwidget_](http://www.htmlwidgets.org/) for [amCharts](https://www.amcharts.com/).
+
+* [wk06_widgets](http://ucsb-bren.github.io/env-info/wk06_widgets.html#htmlwidgets)
+* [Week 8: Interactive Applications - Shiny | ucsb-bren/env-info](http://ucsb-bren.github.io/env-info/wk08_shiny/)
 
 ## Methods and Results
 
-```{r,warning=FALSE, results='asis'}
+```{r,warning=T}
 # load libaries
 suppressPackageStartupMessages({
   library(pipeR)     # install.packages("pipeR")
