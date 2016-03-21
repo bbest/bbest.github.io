@@ -5,6 +5,7 @@ date: "March 21, 2016"
 output:
   html_document:
     css: try_rAmCharts.css
+    toc: yes
   ioslides_presentation:
     incremental: true
 ---
@@ -17,6 +18,8 @@ Let's try [**rAmCharts**](https://github.com/DataKnowledge/rAmCharts), an [_html
 * [Week 8: Interactive Applications - Shiny | ucsb-bren/env-info](http://ucsb-bren.github.io/env-info/wk08_shiny/)
 
 ## Methods and Results
+
+### rAmCharts
 
 ```{r,warning=F, echo=F}
 # load libaries
@@ -40,6 +43,24 @@ result = file.copy(
   system.file("htmlwidgets/lib/images", package = "rAmCharts"), 
   'amcharts', recursive=T)
 ```
+
+### dygraphs
+
+For time series, I recommend checking out the [dygraphs](http://rstudio.github.io/dygraphs/) library.
+
+```{r}
+# load library
+library(dygraphs)
+
+# get
+lungDeaths <- cbind(mdeaths, fdeaths)
+
+# create time-series chart
+dygraph(lungDeaths) %>% 
+  dyRangeSelector()
+```
+
+See also [CSS Styling for dygraphs](http://rstudio.github.io/dygraphs/gallery-css-styling.html).
 
 ## Conclusion
 
