@@ -24,7 +24,14 @@ data(iris)
 
 # generate interactive histogram
 amHist(iris$Sepal.Length, freq = FALSE, breaks = 30, col = "gray",
-       path = "http://www.amcharts.com/lib/3") %>% plot()
+       path = "http://www.amcharts.com/lib/3") %>% 
+  plot()
+
+# add gui images
+dir.create('amcharts/images', showWarnings=F, recursive=T)
+file.copy(
+  system.file("htmlwidgets/lib/images", package = "rAmCharts"), 
+  'amcharts/images', recursive=T)
 ```
 
 ## Conclusion
