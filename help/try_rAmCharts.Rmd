@@ -7,15 +7,16 @@ output: html_document
 
 ## Introduction
 
-Let's try <https://github.com/DataKnowledge/rAmCharts>, an [htmlwidget](http://www.htmlwidgets.org/) for [amCharts](https://www.amcharts.com/).
+Let's try [rAmCharts](https://github.com/DataKnowledge/rAmCharts), an [htmlwidget](http://www.htmlwidgets.org/) for [amCharts](https://www.amcharts.com/).
 
 ## Methods and Results
 
-```{r,warning=FALSE}
+```{r,warning=FALSE, results='asis'}
 # load libaries
 suppressPackageStartupMessages({
   library(pipeR)     # install.packages("pipeR")
   library(rAmCharts) # install.packages("rAmCharts")
+  library(dplyr)
 })
 
 # load data
@@ -23,7 +24,7 @@ data(iris)
 
 # generate interactive histogram
 amHist(iris$Sepal.Length, freq = FALSE, breaks = 30, col = "gray",
-       path = "http://www.amcharts.com/lib/3")
+       path = "http://www.amcharts.com/lib/3") %>% plot()
 ```
 
 ## Conclusion
