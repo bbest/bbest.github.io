@@ -29,9 +29,7 @@ amHist(iris$Sepal.Length, freq = FALSE, breaks = 30, col = "gray",
 
 # add gui images
 dir.create('amcharts/images', showWarnings=F, recursive=T)
-file.copy(
-  system.file("htmlwidgets/lib/images", package = "rAmCharts"), 
-  'amcharts/images', recursive=T)
+file.copy(system.file("htmlwidgets/lib/images", package = "rAmCharts"), 'amcharts', recursive=T)
 ```
 
 ## Conclusion
