@@ -67,8 +67,12 @@ See also [CSS Styling for dygraphs](http://rstudio.github.io/dygraphs/gallery-cs
 Whoah! This `AmCharts` JavaScript library is pretty cool, and easy to load data with `rAmCharts`.
 
 ## Discussion
+customizing style:
 
 - [adding CSS to rmarkdown html_document](http://rmarkdown.rstudio.com/html_document_format.html#custom_css)
+- OR [advanced customization with html includes](http://rmarkdown.rstudio.com/html_document_format.html#includes)
+
+more on htmlwidgets & shiny:
 - [wk06_widgets](http://ucsb-bren.github.io/env-info/wk06_widgets.html#htmlwidgets)
 - [Week 8: Interactive Applications - Shiny | ucsb-bren/env-info](http://ucsb-bren.github.io/env-info/wk08_shiny/)
 
