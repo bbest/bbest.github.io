@@ -1,0 +1,22 @@
+---
+title: "Teaching"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I teach at the intersection of spatial analysis, ecology and informatics.
+
+![Teaching a [Software Carpentry workshop](http://remi-daigle.github.io/2016-04-15-UCSB/) at UCSB (2016-04).](images/bbest_swcarpentry.jpg)
+
+## Courses
+
+- Instructor for [Geographic Information Systems](https://drive.google.com/open?id=0B99FvPajGTwJTGRYWEZJNGVWamM) (GIS) at UCSB, Spring 2016
+- Instructor for [Environmental Informatics](http://ucsb-bren.github.io/env-info) at UCSB, Winter 2016
+- Instructor for [Advanced Topics in GIS](http://ucsb-bren.github.io/esm296-4f/) at UCSB, Fall 2014+2015
+- Instructor for [Landscape Ecology](http://bbest.github.io/landscape-ecology-labs/) at UCSB, Winter 2015
+- Instructor for [Marine Geospatial Analysis](https://drive.google.com/open?id=0B99FvPajGTwJYjVjUEx5WnRqV3YyeEhsVDBmZWg2YlI3NTh3) at Duke, Spring 2012
+- Lab Instructor for Conservation Planning at UCSB, Winter 2011
+- Teaching Assistant for Advanced Geospatial Analysis at Duke, Fall 2010
+- Teaching Assistant for Marine Geospatial Analysis at Duke, Spring 2009

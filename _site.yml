@@ -1,11 +1,17 @@
 name: "my-website"
 navbar:
-  title: "My Website"
+  title: "Ben Best, PhD"
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Research"
+      href: research.html
+    - text: "Teaching"
+      href: teching.html
+    - text: "Design"
+      href: design.html
 output_dir: "."
 output:
   html_document:
@@ -14,3 +20,4 @@ output:
     include:
       after_body: footer.html
     css: styles.css
+    fig_caption: true
