@@ -1,0 +1,9 @@
+name: test_shiny1
+account: bdbest
+server: shinyapps.io
+appId: 85607
+bundleId: 381503
+url: https://bdbest.shinyapps.io/test_shiny1/
+when: 1456510973.72153
+asMultiple: FALSE
+asStatic: FALSE

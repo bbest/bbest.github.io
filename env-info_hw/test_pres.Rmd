@@ -1,0 +1,80 @@
+---
+title: "Untitled"
+author: "Ben Best"
+date: "February 12, 2016"
+output: ioslides_presentation
+---
+
+## Wow Time
+
+Please 
+
+```{r setup, echo=F}
+library(threejs) # devtools::install_github('bwlewis/rthreejs')
+
+# Pretty point cloud example, should run this with WebGL!
+N     <- 20000
+theta <- runif(N)*2*pi
+phi   <- runif(N)*2*pi
+R     <- 1.5
+r     <- 1.0
+x <- (R + r*cos(theta))*cos(phi)
+y <- (R + r*cos(theta))*sin(phi)
+z <- r*sin(theta)
+d <- 6
+h <- 6
+t <- 2*runif(N) - 1
+w <- t^2*sqrt(1-t^2)
+x1 <- d*cos(theta)*sin(phi)*w
+y1 <- d*sin(theta)*sin(phi)*w
+i <- order(phi)
+j <- order(t)
+col <- c( rainbow(length(phi))[order(i)],
+         rainbow(length(t),start=0, end=2/6)[order(j)])
+M <- cbind(x=c(x,x1),y=c(y,y1),z=c(z,h*t))
+scatterplot3js(M,size=0.25,color=col,bg="black")
+```
+
+## Slide with Bullets
+
+```{r, echo=F}
+suppressPackageStartupMessages({
+  library(networkD3) # install.packages('networkD3')
+})
+
+# Create fake data
+src <- c("A", "A", "A", "A",
+        "B", "B", "C", "C", "D")
+target <- c("B", "C", "D", "J",
+            "E", "F", "G", "H", "I")
+networkData <- data.frame(src, target)
+
+# Plot
+simpleNetwork(networkData)
+# Load data
+data(MisLinks)
+data(MisNodes)
+
+# Plot
+forceNetwork(Links = MisLinks, Nodes = MisNodes,
+            Source = "source", Target = "target",
+            Value = "value", NodeID = "name",
+            Group = "group", opacity = 0.8)
+```
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
