@@ -13,6 +13,7 @@ Sitemap:
 - About
   - Timeline
 - Teaching
+  - pic of S/W Carpentry
   - Geospatial
     - GIS
     - Adv GIS
