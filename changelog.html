@@ -11,7 +11,7 @@
 
 
 
-<title>Hello World!</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -195,42 +195,74 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Hello World!</h1>
 
 </div>
 
 
-<p>{% include JB/setup %}</p>
-<p>Read <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll Quick Start</a></p>
-<p>Complete usage and documentation available at: <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a></p>
-<div id="update-author-attributes" class="section level2">
-<h2>Update Author Attributes</h2>
-<p>In <code>_config.yml</code> remember to specify your own data:</p>
-<pre><code>title : My Blog =)
-
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username</code></pre>
-<p>The theme should reference these variables whenever needed.</p>
-</div>
-<div id="sample-posts" class="section level2">
-<h2>Sample Posts</h2>
-<p>This blog contains sample posts which help stage pages and blog data. When you don’t need the samples anymore just delete the <code>_posts/core-samples</code> folder.</p>
-<pre><code>$ rm -rf _posts/core-samples</code></pre>
-<p>Here’s a sample “posts list”.</p>
-<ul class="posts">
-{% for post in site.posts %}
-<li>
-<span>{{ post.date | date_to_string }}</span> » <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-</li>
-{% endfor %}
+<div id="changelog" class="section level2">
+<h2>Changelog</h2>
+<p>Public releases are all root nodes.<br />
+Incremental version bumps that were not released publicly are nested where appropriate.</p>
+<p>P.S. If there is a standard (popular) changelog format, please let me know.</p>
+<ul>
+<li><strong>0.3.0 : 2013.02.24</strong>
+<ul>
+<li><strong>Features</strong></li>
+<li>Update twitter bootstrap to 2.2.2. Add responsiveness and update design a bit.</li>
+<li><span class="citation">@techotaku</span> fixes custom tagline support (finally made it in!)</li>
+<li><span class="citation">@opie4624</span> adds ability to set tags from the command-line.</li>
+<li><span class="citation">@lax</span> adds support for RSS feed. Adds rss and atom html links for discovery.</li>
+<li><p>Small typo fixes.</p></li>
+<li><strong>Bug Fixes</strong></li>
+<li><p><span class="citation">@xuhdev</span> fixes theme:install bug which does not overwrite theme even if saying ‘yes’.</p></li>
+</ul></li>
+<li><strong>0.2.13 : 2012.03.24</strong>
+<ul>
+<li><strong>Features</strong></li>
+<li>0.2.13 : <span class="citation">@mjpieters</span> Updates pages_list helper to only show pages having a title.</li>
+<li>0.2.12 : <span class="citation">@sway</span> recommends showing page tagline only if tagline is set.</li>
+<li><p>0.2.11 : <span class="citation">@LukasKnuth</span> adds ‘description’ meta-data field to post/page scaffold.</p></li>
+<li><strong>Bug Fixes</strong></li>
+<li><p>0.2.10 : <span class="citation">@koriroys</span> fixes typo in atom feed</p></li>
+</ul></li>
+<li><strong>0.2.9 : 2012.03.01</strong>
+<ul>
+<li><strong>Bug Fixes</strong></li>
+<li>0.2.9 : <span class="citation">@alishutc</span> Fixes the error on post creation if date was not specified.</li>
+</ul></li>
+<li><strong>0.2.8 : 2012.03.01</strong>
+<ul>
+<li><strong>Features</strong></li>
+<li>0.2.8 : <span class="citation">@metalelf0</span> Added option to specify a custom date when creating post.</li>
+<li>0.2.7 : <span class="citation">@daz</span> Updates twitter theme framework to use 2.x while still maintaining core layout. #50 <span class="citation">@philips</span> and <span class="citation">@treggats</span> add support for page.tagline metadata. #31 &amp; #48</li>
+<li>0.2.6 : <span class="citation">@koomar</span> Adds Mixpanel analytics provider. #49</li>
+<li>0.2.5 : <span class="citation">@nolith</span> Adds ability to load custom rake scripts. #33</li>
+<li><p>0.2.4 : <span class="citation">@tommyblue</span> Updated disqus comments provider to be compatible with posts imported from Wordpress. #47</p></li>
+<li><strong>Bug Fixes</strong></li>
+<li>0.2.3 : <span class="citation">@3martini</span> Adds Windows MSYS Support and error checks for git system calls. #40</li>
+<li>0.2.2 : <span class="citation">@sstar</span> Resolved an issue preventing disabling comments for individual pages #44</li>
+<li><p>0.2.1 : Resolve incorrect HOME_PATH/BASE_PATH settings</p></li>
+</ul></li>
+<li><strong>0.2.0 : 2012.02.01</strong><br />
+Features
+<ul>
+<li><p>Add Theme Packages v 0.1.0 All themes should be tracked and maintained outside of JB core. Themes get “installed” via the Theme Installer. Theme Packages versioning is done separately from JB core with the main intent being to make sure theme versions are compatible with the given installer.</p></li>
+<li>0.1.2 : <span class="citation">@jamesFleeting</span> adds facebook comments support</li>
+<li><p>0.1.1 : <span class="citation">@SegFaultAX</span> adds tagline as site-wide configuration</p></li>
+</ul></li>
+<li><strong>0.1.0 : 2012.01.24</strong><br />
+First major versioned release.<br />
+Features
+<ul>
+<li>Standardize Public API</li>
+<li>Use name-spacing and modulation where possible.</li>
+<li>Ability to override public methods with custom code.</li>
+<li>Publish the theme API.</li>
+<li>Ship with comments, analytics integration.</li>
+</ul></li>
+<li><strong>0.0.1 : 2011.12.30</strong><br />
+First public release, lots of updates =p Thank you everybody for dealing with the fast changes and helping me work out the API to a manageable state.</li>
 </ul>
-</div>
-<div id="to-do" class="section level2">
-<h2>To-Do</h2>
-<p>This theme is still unfinished. If you’d like to be added as a contributor, <a href="http://github.com/plusjade/jekyll-bootstrap">please fork</a>! We need to clean up the themes, make theme usage guides with theme-specific markup examples.</p>
 </div>
 
 <p>Copyright &copy; 2016 Skynet, Inc. All rights reserved.</p>
