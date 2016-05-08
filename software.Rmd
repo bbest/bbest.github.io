@@ -1,0 +1,17 @@
+---
+title: "Software"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- **MGEL Toolbox**
+
+  - Roberts et al
+  
+- **OHI**
+
+  - subcountry
+  
+- **OBIS-SEAMAP**: portal development

@@ -5,3 +5,31 @@ title: "Research"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+<!---
+- **Machine Learning**
+
+  - iNaturalist applying to imagery. MBON.
+-->
+
+- **Spatial Decision Support Frameworks**
+
+  - ship rerouting GIF
+  
+  - offshore wind
+
+- **Connectivity**
+  
+  - software: MGEL
+  
+  - ConnMod. video
+  
+  - Anadon et al. MLPA habitats
+
+- **Species Distribution Modeling**
+
+  - paper: Roberts et al. 
+  
+  - project: BC
+
+  

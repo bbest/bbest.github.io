@@ -1,9 +1,22 @@
 ---
-title: "Environmental Informatics Consulting"
+title: "Environmental Informatics Consultant"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Welcome! As an Environmental Informatics consultant I offer services to creatively solve environmental problems with cutting edge data science technologies.
+
+## Mission Statement
+
+Support smarter, more transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.
+
+
 ![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=386&h=326)
+
+- **Hacking**
+- **Math & Statistics**
+- **Environmental Science**: ecology, evolution, species distributions, connectivity, environmental laws & regulations.
+
+missing? spatial

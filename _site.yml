@@ -10,8 +10,8 @@ navbar:
       href: research.html
     - text: "Teaching"
       href: teaching.html
-    - text: "Design"
-      href: design.html
+    - text: "Software"
+      href: software.html
 output_dir: "."
 output:
   html_document:
