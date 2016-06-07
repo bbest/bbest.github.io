@@ -1,16 +1,81 @@
 ---
-title: "Environmental Informatics Consultant"
+title: "Environmental Data Scientist"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Welcome! As an Environmental Informatics consultant I offer services to creatively solve environmental problems with cutting edge data science technologies.
+Welcome! As an Environmental Data Scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.
 
 ## Mission Statement
 
 Support smarter, more transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.
+
+```{r}
+library(VennDiagram) # install.packages('VennDiagram')
+
+#venn.diagram(x = list(A = 1:150, B = 121:170), filename = 'images/venn.diagram.png', imagetype = 'png')
+
+fname = 'Venn_3set.png'
+venn.plot <- venn.diagram(
+	x = list(
+		'Hacking Skills' = c(1,1.5,2,2.5, 3),
+		'Statistics & Math' = c(1,2,3),
+		'Environmental Science' = c(1,2,3)),
+	filename = fname,
+	col = 'transparent',
+	fill = c("red", "green", "yellow"),
+	alpha = 0.50)
+system(sprintf('open %s', fname))
+
+venn.diagram(
+	x = list(
+		A = c(1:10),
+		B = c(11:90),
+		C = c(81:90)
+		),
+	euler.d = TRUE,
+	filename = "Euler_3set_scaled.tiff",
+	cex = 2.5,
+	cat.cex = 2.5,
+	cat.pos = 0
+	)
+
+,
+	label.col = c("orange", "white", "darkorchid4", "white", 
+	"white", "white", "white", "white", "darkblue", "white", 
+	"white", "white", "white", "darkgreen", "white"),
+	cex = 1.5,
+	fontfamily = "serif",
+	fontface = "bold",
+	cat.col = c("darkblue", "darkgreen", "orange", "darkorchid4"),
+	cat.cex = 1.5,
+	cat.pos = 0,
+	cat.dist = 0.07,
+	cat.fontfamily = "serif",
+	rotation.degree = 270,
+	margin = 0.2
+	);
+
+draw.triple.venn(1, 1, 1, )
+draw.triple.venn(area1 = 22, area2 = 20, area3 = 13, n12 = 11, n23 = 4, n13 = 5, 
+    n123 = 1, category = c("Dog People", "Cat People", "Lizard People"), lty = "blank", 
+    fill = c("red", "green", "blue"), cat.prompts = T)
+
+library(venneuler) # install.packages('venneuler')
+v <- venneuler(c(
+  'Hacking Skills' = 1, 
+  'Statistics' = 1,
+	'Environmental Science' = 1,
+  'Hacking Skills&Statistics' = 0.1,
+  'Environmental Science&Statistics' = 0.1,
+  'Environmental Science&Hacking Skills' = 0.1))
+#v$colors = c('red','green','blue')
+plot(v)
+```
+
+![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](images/venn.diagram.png)
 
 
 ![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=386&h=326)
@@ -20,3 +85,12 @@ Support smarter, more transparent environmental decision-making promoting open d
 - **Environmental Science**: ecology, evolution, species distributions, connectivity, environmental laws & regulations.
 
 missing? spatial
+
+
+## Data Science
+
+Hadley's circle:
+
+![]()
+
+- shiny revoluation w/ reactive programming
