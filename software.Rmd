@@ -8,10 +8,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - **MGEL Toolbox**
 
-  - Roberts et al
+    - ArcRstats beginnings, Roberts et al
   
 - **OHI**
 
-  - subcountry
+    - subcountry repositories
   
 - **OBIS-SEAMAP**: portal development

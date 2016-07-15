@@ -14,22 +14,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - **Spatial Decision Support Frameworks**
 
-  - ship rerouting GIF
+    - ship rerouting GIF
   
-  - offshore wind
+    - offshore wind
 
 - **Connectivity**
   
-  - software: MGEL
+    - software: MGEL
   
-  - ConnMod. video
+    - ConnMod. video
   
-  - Anadon et al. MLPA habitats
+    - Anadon et al. MLPA habitats
 
 - **Species Distribution Modeling**
 
-  - paper: Roberts et al. 
+    - paper: Roberts et al. 
   
-  - project: BC
+    - project: BC
 
   

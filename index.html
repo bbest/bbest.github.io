@@ -1,19 +1,265 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta charset="utf-8"/>
-<script src="index_files/htmlwidgets-0.6/htmlwidgets.js"></script>
-<script src="index_files/d3-3.5.5/d3.min.js"></script>
-<script src="index_files/d3plus-1.7.3/d3plus.min.js"></script>
-<script src="index_files/d3plus-funs-0.0.1/d3plus-funs.js"></script>
-<script src="index_files/d3plus-binding-0.0.1/d3plus.js"></script>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Environmental Data Scientist</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="site_libs/highlight/textmate.css"
+      type="text/css" />
+<script src="site_libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
 </head>
-<body style="background-color:white;">
-<div id="htmlwidget_container">
-  <div id="htmlwidget-3245" style="width:960px;height:500px;" class="d3plus html-widget"></div>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.0/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Ben Best, PhD</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="software.html">Software</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Environmental Data Scientist</h1>
+
 </div>
-<script type="application/json" data-for="htmlwidget-3245">{"x":{"data":{"País":["Brazil","Colombia","Indonesia","India","Mexico","Russian Federation"],"CAB":[635,209,868,776,471,511],"INF":[7.62,1.52,4.35,6.25,2.04,5.89]},"settings":{"data_names":{"id":"País","size":"CAB","color":"INF"}},"d3plusType":"tree"},"evals":[],"jsHooks":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-3245">{"viewer":{"width":450,"height":350,"padding":0,"fill":true},"browser":{"width":960,"height":500,"padding":40,"fill":true}}</script>
+
+
+<p>Welcome! As an Environmental Data Scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.</p>
+<div id="mission-statement" class="section level2">
+<h2>Mission Statement</h2>
+<p>Support comprehensive, transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.</p>
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=386&amp;h=326" alt="Environmental Informatics as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics." />
+<p class="caption"><strong>Environmental Informatics</strong> as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.</p>
+</div>
+<ul>
+<li><strong>Programming</strong>: scientific programming, web technologies, database design</li>
+<li><strong>Statistics</strong>: machine learning, statistical inference, spatial analysis</li>
+<li><strong>Environmental Science</strong>: ecology, evolution, species distributions, connectivity, environmental laws &amp; regulations.</li>
+</ul>
+</div>
+<div id="data-science" class="section level2">
+<h2>Data Science</h2>
+<p>In the spirit of exploratory data analysis upon which R was founded, I am a fan of the data science process as outlined by Hadley Wickham:</p>
+<div class="figure">
+<img src="images/r4ds_data-science.png" />
+
+</div>
+<!--To elaborate...:
+
+- Shiny revoluation w/ reactive programming
+-->
+</div>
+
+<p>Copyright &copy; 2016. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
 </body>
 </html>

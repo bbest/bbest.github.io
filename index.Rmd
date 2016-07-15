@@ -10,9 +10,9 @@ Welcome! As an Environmental Data Scientist I offer services to creatively solve
 
 ## Mission Statement
 
-Support smarter, more transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.
+Support comprehensive, transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.
 
-```{r}
+```{r venn, eval=FALSE, echo=F}
 library(VennDiagram) # install.packages('VennDiagram')
 
 #venn.diagram(x = list(A = 1:150, B = 121:170), filename = 'images/venn.diagram.png', imagetype = 'png')
@@ -75,22 +75,19 @@ v <- venneuler(c(
 plot(v)
 ```
 
-![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](images/venn.diagram.png)
-
-
 ![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=386&h=326)
 
-- **Hacking**
-- **Math & Statistics**
+- **Programming**: scientific programming, web technologies, database design 
+- **Statistics**: machine learning, statistical inference, spatial analysis
 - **Environmental Science**: ecology, evolution, species distributions, connectivity, environmental laws & regulations.
-
-missing? spatial
-
 
 ## Data Science
 
-Hadley's circle:
+In the spirit of exploratory data analysis upon which R was founded, I am a fan of the data science process as outlined by Hadley Wickham:
 
-![]()
+![](images/r4ds_data-science.png)
 
-- shiny revoluation w/ reactive programming
+<!--To elaborate...:
+
+- Shiny revoluation w/ reactive programming
+-->
