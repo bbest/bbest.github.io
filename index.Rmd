@@ -76,7 +76,7 @@ v <- venneuler(c(
 plot(v)
 ```
 
-![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300)
+![**Environmental Data Science** as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300)
 
 - **Programming**: scientific programming, web technologies, database design 
 - **Statistics**: machine learning, statistical inference, spatial analysis
