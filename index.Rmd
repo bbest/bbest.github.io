@@ -4,6 +4,7 @@ title: "Environmental Data Scientist"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(htmltools)
 ```
 
 Welcome! As an Environmental Data Scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.
@@ -75,7 +76,7 @@ v <- venneuler(c(
 plot(v)
 ```
 
-![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=386&h=326)
+![**Environmental Informatics** as a Venn diagram representing the intersection of hacking skills (programming, database, system administration), math and statistics, and disciplinary expertise in environmental informatics.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300)
 
 - **Programming**: scientific programming, web technologies, database design 
 - **Statistics**: machine learning, statistical inference, spatial analysis
@@ -85,9 +86,12 @@ plot(v)
 
 In the spirit of exploratory data analysis upon which R was founded, I am a fan of the data science process as outlined by Hadley Wickham:
 
+`r img(src="images/r4ds_data-science.png", width=400)`
+
+<!--
 ![](images/r4ds_data-science.png)
 
-<!--To elaborate...:
+To elaborate...:
 
 - Shiny revoluation w/ reactive programming
 -->
