@@ -1,3 +1,7 @@
 blockquote {
   font-style: italic
 }
+.caption {
+  font-size: 10pt;
+  font-style: italic
+}

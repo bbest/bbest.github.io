@@ -11,7 +11,7 @@ Welcome! As an Environmental Data Scientist I offer services to creatively solve
 
 ## Mission Statement
 
-Support comprehensive, transparent environmental decision-making promoting open data, open science and data rich interactive visualizations that enable users synoptic views of complex problems as well as deep dives into underpinnings.
+Support comprehensive and transparent environmental decision-making that promotes open-source, free or low cost approaches to data, analysis and rich interactive visualizations which enable users synoptic views of complex problems as well as deep dives into underpinnings.
 
 ```{r venn, eval=FALSE, echo=F}
 library(VennDiagram) # install.packages('VennDiagram')
@@ -76,11 +76,11 @@ v <- venneuler(c(
 plot(v)
 ```
 
-![**Environmental Data Science** as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300)
+![Environmental Data Science as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science.](https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300)
 
 - **Programming**: scientific programming, web technologies, database design 
 - **Statistics**: machine learning, statistical inference, spatial analysis
-- **Environmental Science**: ecology, evolution, species distributions, connectivity, environmental laws & regulations.
+- **Environmental Science**: ecology, evolution, species distributions, connectivity, environmental laws & regulations
 
 ## Data Science
 

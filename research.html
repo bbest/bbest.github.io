@@ -14,6 +14,9 @@
 <title>Research</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -151,7 +154,7 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.0/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -161,6 +164,100 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -214,28 +311,98 @@ $(document).ready(function () {
 
   - iNaturalist applying to imagery. MBON.
 -->
+<p>Here are some research highlights. For a full list of publications, please see my <a href="http://www.bdbest.org/cv">CV</a>.</p>
+<div id="species-distribution-modeling" class="section level2">
+<h2>Species Distribution Modeling</h2>
 <ul>
-<li><p><strong>Spatial Decision Support Frameworks</strong></p>
-<ul>
-<li><p>ship rerouting GIF</p></li>
-<li><p>offshore wind</p></li>
-</ul></li>
-<li><p><strong>Connectivity</strong></p>
-<ul>
-<li><p>software: MGEL</p></li>
-<li><p>ConnMod. video</p></li>
-<li><p>Anadon et al. MLPA habitats</p></li>
-</ul></li>
-<li><p><strong>Species Distribution Modeling</strong></p>
-<ul>
-<li><p>paper: Roberts et al.</p></li>
-<li><p>project: BC</p></li>
-</ul></li>
+<li><p><a href="http://seamap.env.duke.edu/models/Duke-EC-GOM-2015/"><strong>Habitat-based cetacean density models</strong> for the U.S. Atlantic and Gulf of Mexico (2015 Version)</a> (<a href="http://www.nature.com/articles/srep22615">Roberts, Best <em>et al</em> 2016</a>)</p>
+<p><a href="http://seamap.env.duke.edu/models/Duke-EC-GOM-2015/"><img src="images/Roberts2016_Fig5.jpg" /></a></p>
+<p class="caption">
+Figure 5 from the paper showing the predicted mean density of baleen whales in July (A) and January (B) for the East Coast region.
+</p></li>
+<li><p>Updated <strong>marine mammal distribution and abundance estimates</strong> in coastal British Columbia (<a href="https://archive.iwc.int/pages/download_progress.php?ref=5745&amp;ext=pdf">Best <em>et al</em> 2015</a>)</p>
+<div class="figure">
+<img src="images/Best2016_Fig7-HW-densities_thmb.png" />
+
+</div>
+<p class="caption">
+Extracted from Figure 7 in the paper showing the relative distribution (e) and overall abundance estimates for the inner waters of British Columbia.
+</p></li>
 </ul>
+</div>
+<div id="spatial-decision-support-frameworks" class="section level2">
+<h2>Spatial Decision Support Frameworks</h2>
+<p>For these spatial decision support frameworks, I implemented an interactive visualization whereby the map, plot and table are synchronized with each other, and can be interactively explored to highlight sites or routes.</p>
+<ul>
+<li><p><a href="http://shiny.env.duke.edu/bbest/siting/"><strong>Siting</strong> offshore wind energy to minimize impacts on birds in space and whales in time</a></p>
+<p><a href="http://shiny.env.duke.edu/bbest/siting/"><img src="images/siting-wind_thmb.png" /></a></p>
+<p class="caption">
+Sites on the map (10 km<sup>2</sup> pixels) in the US Mid-Atlantic are colored according to the average utility depicted in the tradeoff plot to: maximize profitability to offshore wind energy development (net present value in US$, on normalized scale) on y axis, and minimizing bird sensitivity on x axis (based on 20 bird species distributions summed and weighted by sensitivity to collision and displacement, also on a normalized scale). Click a site on the map to see the cetaceans sensitivity over time, so that episidic events that impart high acoustic energy underwater (seismic air gun surveying and pile driving) can be scheduled at times when endangered whales, such as the North Atlantic Right Whale, are generally absent.
+</p></li>
+<li><p><a href="http://shiny.env.duke.edu/bbest/consmap/"><strong>Routing</strong> ships to minimize whale strikes</a></p>
+<p><a href="http://shiny.env.duke.edu/bbest/consmap/"><img src="images/routing-ships_thmb.png" /></a></p>
+<p class="caption">
+Routes between starting and end points are selectable from the drop-down selections as ports and major entry points to British Columbia, or arbitary start and end points can be entered. Routes are then visible in the interactive map based on varying levels of avoidance of marine mammal hotspots as derived by a summing across marine mammal density surfaces and weighting by conservation concern. This uses a prescriptive least-cost routing approach rather than post-hoc evaluation of proposed routes.
+</p></li>
+</ul>
+</div>
+<div id="connectivity" class="section level2">
+<h2>Connectivity</h2>
+<ul>
+<li><p>Habitat-specific <strong>larval dispersal and marine connectivity</strong>: implications for spatial conservation planning (<a href="http://www.esajournals.org/doi/abs/10.1890/ES13-00119.1">Anadón et al 2013</a>)</p>
+<div class="figure">
+<img src="images/Anadon2013_Fig3-ACD_thmb.png" />
+
+</div></li>
+<li><p><strong>Larval dispersal modeling</strong> example of grouper spawning in the Gulf of California using <a href="http://mgel.env.duke.edu/mget">Marine Geospatial Ecology Tools</a></p>
+<iframe src="https://www.youtube.com/embed/WBPdztdnPos" width="400" height="200" frameborder="0" allowfullscreen=""></iframe></li>
+</ul>
+</div>
+<div id="web-portal-development" class="section level2">
+<h2>Web Portal Development</h2>
+<ul>
+<li><p><a href="http://seamap.env.duke.edu/">OBIS-SEAMAP</a> <strong>biodiversity portal</strong> of marine mammal, seabird and sea turtle observations</p>
+<p><a href="http://seamap.env.duke.edu/"><img src="images/obis-seamap_thm.png" /></a></p></li>
+<li><p><a href="http://ohi-science.org/"><strong>Ocean Health Index</strong></a>: global and subcountry portals</p>
+<p><a href="http://ohi-science.org/chl/app/"><img src="images/OHI-shiny2_thm.png" /></a></p>
+<table>
+<thead>
+<tr class="header">
+<th>portal</th>
+<th>links</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global</td>
+<td><a href="https://github.com/OHI-Science/ohi-global">data</a>, <a href="http://www.oceanhealthindex.org/">website</a>, <a href="http://ohi-science.nceas.ucsb.edu/ohi-shiny2">app</a></td>
+</tr>
+<tr class="even">
+<td>Belize</td>
+<td><a href="https://github.com/ohi-science/blz">data</a>, <a href="http://ohi-science.org/blz/">website</a>, <a href="http://ohi-science.org/blz/app/">app</a></td>
+</tr>
+<tr class="odd">
+<td>Chile</td>
+<td><a href="https://github.com/OHI-Science/chl">data</a>, <a href="http://ohi-science.org/chl/">website</a>, <a href="http://ohi-science.org/chl/app/">app</a></td>
+</tr>
+<tr class="even">
+<td>Ecuador</td>
+<td><a href="https://github.com/OHI-Science/ecu">data</a>, <a href="http://ohi-science.org/ecu/">website</a>, <a href="http://ohi-science.org/ecu/app/">app</a></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="reproducible-science" class="section level2">
+<h2>Reproducible Science</h2>
+<p>Please see my <a href="teaching.html">Teaching</a> page, particularly for <a href="http://ucsb-bren.github.io/env-info">Environmental Informatics</a>.</p>
+</div>
 
 <p>Copyright &copy; 2016. All rights reserved.</p>
 
 
+</div>
+</div>
 
 </div>
 
