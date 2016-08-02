@@ -14,9 +14,6 @@
 <title>Environmental Data Scientist</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -166,100 +163,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.9em;
-  padding-left: 5px;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -306,14 +209,11 @@ div.tocify {
 </div>
 
 
-<p>Welcome! As an Environmental Data Scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.</p>
+<p>Welcome! As an environmental data scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.</p>
 <div id="mission-statement" class="section level2">
 <h2>Mission Statement</h2>
-<p>Support comprehensive and transparent environmental decision-making that promotes open-source, free or low cost approaches to data, analysis and rich interactive visualizations which enable users synoptic views of complex problems as well as deep dives into underpinnings.</p>
-<div class="figure">
-<img src="https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300" alt="Environmental Data Science as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science." />
-<p class="caption">Environmental Data Science as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science.</p>
-</div>
+<p>Support transparent environmental decision-making that promotes open data and analysis along with rich interactive visualizations that enable users high level views of complex problems as well as deep dives into underpinnings.</p>
+<p><img src="https://docs.google.com/drawings/d/17Uyjlz5yG56aBGsPEV5kWzcnwE9bQEczsJiwZ8Xb26E/pub?w=300" alt="Environmental Data Science as a Venn diagram representing the intersection of programming, statistics, and disciplinary expertise in environmental science." /></p>
 <ul>
 <li><strong>Programming</strong>: scientific programming, web technologies, database design</li>
 <li><strong>Statistics</strong>: machine learning, statistical inference, spatial analysis</li>
@@ -322,8 +222,9 @@ div.tocify {
 </div>
 <div id="data-science" class="section level2">
 <h2>Data Science</h2>
-<p>In the spirit of exploratory data analysis upon which R was founded, I am a fan of the data science process as outlined by Hadley Wickham:</p>
+<p>I am a fan of the data science process as outlined by <a href="http://hadley.nz/">Hadley Wickham</a> in <a href="http://r4ds.had.co.nz/">R for Data Science</a>:</p>
 <img src="images/r4ds_data-science.png" width="400"/>
+<p>Usually most of the work in modeling is at the data preparation and interpretation stages, ie before and after modeling. I’m an advocate of efficient data ingestion (estimated <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0">50-80%spent on collection and preparation of data</a>), the iterative process of <a href="https://en.wikipedia.org/wiki/Exploratory_data_analysis">exploratory data analysis</a> and closing the gap between the starting with a question and sharing analytical results online and interactively to any audience.</p>
 <!--
 ![](images/r4ds_data-science.png)
 
@@ -336,8 +237,6 @@ To elaborate...:
 <p>Copyright &copy; 2016. All rights reserved.</p>
 
 
-</div>
-</div>
 
 </div>
 
