@@ -18,6 +18,7 @@ TODO:
 
 - timeline (Gantt)
   - see [About Agency - Start Bootstrap Theme ](http://blackrockdigital.github.io/startbootstrap-agency/#about)
+  - great dynamic moving Career chronology section at [Jalpc](http://www.jack003.com/#career), a JekyllThemes template
 - carousel
   * [interactive viz embedded inside carousel](http://ramnathv.github.io/carouselDemo/#10)
   * [slick - the last carousel you'll ever need](http://kenwheeler.github.io/slick/)

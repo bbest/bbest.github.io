@@ -14,14 +14,14 @@
 <title>Research</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <link rel="stylesheet"
@@ -97,6 +97,7 @@ button.code-folding-btn:focus {
   outline: none;
 }
 </style>
+
 
 <style type="text/css">
 /* padding for bootstrap navbar */
@@ -342,7 +343,7 @@ Extracted from Figure 7 in the paper showing the relative distribution (e) and o
 <p><a href="http://shiny.env.duke.edu/bbest/siting/"><strong>Siting</strong> offshore wind energy to minimize impacts on birds in space and whales in time</a></p>
 <p><a href="http://shiny.env.duke.edu/bbest/siting/"><img src="images/siting-wind_thmb.png" /></a></p>
 <p class="caption">
-Sites on the map (10 km<sup>2</sup> pixels) in the US Mid-Atlantic are colored according to the average utility depicted in the tradeoff plot to: maximize profitability to offshore wind energy development (net present value in US$, on normalized scale) on y axis, and minimizing bird sensitivity on x axis (based on 20 bird species distributions summed and weighted by sensitivity to collision and displacement, also on a normalized scale). Click a site on the map to see the cetaceans sensitivity over time, so that episidic events that impart high acoustic energy underwater (seismic air gun surveying and pile driving) can be scheduled at times when endangered whales, such as the North Atlantic Right Whale, are generally absent.
+Sites on the map (10 km<sup>2</sup> pixels) in the US Mid-Atlantic are colored according to the average utility depicted in the tradeoff plot to: maximize profitability to offshore wind energy development (net present value in US$, on normalized scale) on y-axis, and minimizing bird sensitivity on x-axis (based on 20 bird species distributions summed and weighted by sensitivity to collision and displacement, also on a normalized scale). Click a site on the map to see the cetaceans sensitivity over time, so that episodic events that impart high acoustic energy underwater (seismic air gun surveying and pile driving) can be scheduled at times when endangered whales, such as the North Atlantic Right Whale, are generally absent.
 </p>
 </div>
 <div id="routing-ships-around-whale-hotspots" class="section level3">
@@ -350,7 +351,7 @@ Sites on the map (10 km<sup>2</sup> pixels) in the US Mid-Atlantic are colored a
 <p><a href="http://shiny.env.duke.edu/bbest/consmap/"><strong>Routing</strong> ships to minimize whale strikes</a></p>
 <p><a href="http://shiny.env.duke.edu/bbest/consmap/"><img src="images/routing-ships_thmb.png" /></a></p>
 <p class="caption">
-Routes between starting and end points are selectable from the drop-down selections as ports and major entry points to British Columbia, or arbitary start and end points can be entered. Routes are then visible in the interactive map based on varying levels of avoidance of marine mammal hotspots as derived by a summing across marine mammal density surfaces and weighting by conservation concern. This uses a prescriptive least-cost routing approach rather than post-hoc evaluation of proposed routes.
+Routes between starting and end points are selectable from the drop-down selections as ports and major entry points to British Columbia, or arbitrary start and end points can be entered. Routes are then visible in the interactive map based on varying levels of avoidance of marine mammal hotspots as derived by summing across marine mammal density surfaces and weighting by conservation concern. This uses a prescriptive least-cost routing approach rather than post-hoc evaluation of proposed routes.
 </p>
 </div>
 </div>
@@ -428,6 +429,7 @@ Routes between starting and end points are selectable from the drop-down selecti
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

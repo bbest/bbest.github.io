@@ -43,7 +43,7 @@ For these spatial decision support frameworks, I implemented an interactive visu
 
 [![](./images/siting-wind_thmb.png)](http://shiny.env.duke.edu/bbest/siting/)
     
-<p class="caption">Sites on the map (10 km^2^ pixels) in the US Mid-Atlantic are colored according to the average utility depicted in the tradeoff plot to: maximize profitability to offshore wind energy development (net present value in US$, on normalized scale) on y axis, and minimizing bird sensitivity on x axis (based on 20 bird species distributions summed and weighted by sensitivity to collision and displacement, also on a normalized scale). Click a site on the map to see the cetaceans sensitivity over time, so that episidic events that impart high acoustic energy underwater (seismic air gun surveying and pile driving) can be scheduled at times when endangered whales, such as the North Atlantic Right Whale, are generally absent.</p>
+<p class="caption">Sites on the map (10 km^2^ pixels) in the US Mid-Atlantic are colored according to the average utility depicted in the tradeoff plot to: maximize profitability to offshore wind energy development (net present value in US$, on normalized scale) on y-axis, and minimizing bird sensitivity on x-axis (based on 20 bird species distributions summed and weighted by sensitivity to collision and displacement, also on a normalized scale). Click a site on the map to see the cetaceans sensitivity over time, so that episodic events that impart high acoustic energy underwater (seismic air gun surveying and pile driving) can be scheduled at times when endangered whales, such as the North Atlantic Right Whale, are generally absent.</p>
 
 ### Routing Ships around Whale Hotspots
 
@@ -51,7 +51,7 @@ For these spatial decision support frameworks, I implemented an interactive visu
 
 [![](./images/routing-ships_thmb.png)](http://shiny.env.duke.edu/bbest/consmap/)
     
-<p class="caption">Routes between starting and end points are selectable from the drop-down selections as ports and major entry points to British Columbia, or arbitary start and end points can be entered. Routes are then visible in the interactive map based on varying levels of avoidance of marine mammal hotspots as derived by a summing across marine mammal density surfaces and weighting by conservation concern. This uses a prescriptive least-cost routing approach rather than post-hoc evaluation of proposed routes.</p>
+<p class="caption">Routes between starting and end points are selectable from the drop-down selections as ports and major entry points to British Columbia, or arbitrary start and end points can be entered. Routes are then visible in the interactive map based on varying levels of avoidance of marine mammal hotspots as derived by summing across marine mammal density surfaces and weighting by conservation concern. This uses a prescriptive least-cost routing approach rather than post-hoc evaluation of proposed routes.</p>
   
 ## Connectivity
   
