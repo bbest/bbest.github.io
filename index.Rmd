@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(htmltools)
 ```
 
-Welcome! As an environmental data scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.
+Welcome! As an environmental data scientist I offer services to creatively solve environmental problems with cutting edge data science technologies. Please visit my new company at [EcoQuants.com](http://EcoQuants.com).
 
 ## Mission Statement
 

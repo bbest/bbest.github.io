@@ -19,12 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -152,7 +151,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -210,7 +208,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Welcome! As an environmental data scientist I offer services to creatively solve environmental problems with cutting edge data science technologies.</p>
+<p>Welcome! As an environmental data scientist I offer services to creatively solve environmental problems with cutting edge data science technologies. Please visit my new company at <a href="http://EcoQuants.com">EcoQuants.com</a>.</p>
 <div id="mission-statement" class="section level2">
 <h2>Mission Statement</h2>
 <p>Support transparent environmental decision-making that promotes open data and analysis along with rich interactive visualizations that enable users high level views of complex problems as well as deep dives into underpinnings.</p>
@@ -239,7 +237,7 @@ To elaborate...:
   <p class="navbar-default navbar-brand">Copyright &copy; 2016.</p>
 </div-->
 
-Copyright &copy; 2016. EcoDataScience.com, 508 E Haley St, Santa Barbara CA 93103. 805-705-9770
+Copyright &copy; 2017. <a href="http://ecoquants.com">EcoQuants.com</a>, 508 E Haley St, Santa Barbara CA 93103. 805-705-9770
 
 
 
@@ -248,8 +246,11 @@ Copyright &copy; 2016. EcoDataScience.com, 508 E Haley St, Santa Barbara CA 9310
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 
