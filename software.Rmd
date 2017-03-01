@@ -14,7 +14,7 @@ I started developing some helper functions to enable communication between R and
 
 <p class="caption">Lead developer Jason Roberts (right), myself (left), advisor Dr. Patrick Halpin (center left) are awarded with special achievement by sole proprietor of ESRI Jack Dangermond (center right).</p>
 
-![](images/MGET-screen_thm.png)
+[![](images/MGET-screen_thm.png)](http://mgel2011-kvm.env.duke.edu/mget/documentation/arcgis-tutorial/#MgetTree)
 
 <p class="caption">Screenshot of the toolbox. Each of the toolsets listed expands into many tools within.</p>
   
